@@ -31,6 +31,6 @@ public class WirelessCharging : MonoBehaviour, ISubsystem {
     }
 
     private void ActivateEffect() {
-
+        // TODO: Affect player vision
     }
 }
