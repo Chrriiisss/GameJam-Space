@@ -7,7 +7,12 @@ public class MainMenu : MonoBehaviour {
 
     void Update() {
         if (Input.GetKey(KeyCode.Space)) {
-            SceneManager.LoadScene("TheGame");
+            if (SceneManager.GetActiveScene().name == "GameWin") {
+                SceneManager.LoadScene("MainMenu");
+            }
+            else {
+                SceneManager.LoadScene("TheGame");
+            }            
         }        
     }
 }
