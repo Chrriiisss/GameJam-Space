@@ -1,11 +1,8 @@
 fileFormatVersion: 2
-guid: e050b5e79161145e0aeb06c177b2f984
+guid: 8f9ff046c3d64468787eda5c2b3b57cf
 ModelImporter:
   serializedVersion: 19300
-  internalIDToNameTable:
-  - first:
-      74: -576438473826346130
-    second: OILS|Walking
+  internalIDToNameTable: []
   externalObjects: {}
   materials:
     materialImportMode: 1

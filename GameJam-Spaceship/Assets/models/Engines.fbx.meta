@@ -1,26 +1,8 @@
 fileFormatVersion: 2
-guid: 7249671beb2984ff9b298640db61cb96
+guid: 5d628eca9e0cc4d23a84cb38918f16cd
 ModelImporter:
   serializedVersion: 19300
-  internalIDToNameTable:
-  - first:
-      74: 998748687003678064
-    second: Frame|Door1Action
-  - first:
-      74: -101464965139634478
-    second: Frame|Open
-  - first:
-      74: -3058623425957557810
-    second: Door1|Door1Action
-  - first:
-      74: 752817065187661759
-    second: Door1|Open
-  - first:
-      74: 583072607008533245
-    second: Door2|Door1Action
-  - first:
-      74: -3659465407650447456
-    second: Door2|Open
+  internalIDToNameTable: []
   externalObjects: {}
   materials:
     materialImportMode: 1
