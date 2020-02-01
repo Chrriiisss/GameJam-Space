@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameDirector : MonoBehaviour {
 
@@ -94,10 +95,10 @@ public class GameDirector : MonoBehaviour {
     }
 
     private void GameOver() {
-        // IMPLEMENT
+        SceneManager.LoadScene("GameOver");
     }
 
     private void GameWin() {
-        // IMPLEMENT
+        SceneManager.LoadScene("GameWin");
     }
 }
