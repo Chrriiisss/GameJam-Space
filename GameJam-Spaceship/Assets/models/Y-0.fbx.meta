@@ -4,14 +4,35 @@ ModelImporter:
   serializedVersion: 19300
   internalIDToNameTable:
   - first:
+      74: -5682019035593262093
+    second: Cylinder|BakedIdle2
+  - first:
+      74: -8491438643752182734
+    second: Cylinder|BakedWalk2
+  - first:
       74: 4237032064768345921
     second: Cylinder|Jump Moving
   - first:
+      74: 1878624768651935125
+    second: Body|BakedIdle2
+  - first:
+      74: -5284667213060845882
+    second: Body|BakedWalk2
+  - first:
+      74: 3889634814954103615
+    second: Body|Idle
+  - first:
+      74: -5414765198776976173
+    second: Armature|BakedIdle2
+  - first:
+      74: 5214143435151266754
+    second: Armature|BakedWalk
+  - first:
+      74: -8933366273422573398
+    second: Armature|BakedWalk2
+  - first:
       74: -8945691123924629249
     second: Armature|Idle
-  - first:
-      74: -2328835098782832033
-    second: Armature|Interact
   - first:
       74: 7945606650456816744
     second: Armature|Jump Moving
@@ -52,7 +73,7 @@ ModelImporter:
     isReadable: 0
   meshes:
     lODScreenPercentages: []
-    globalScale: 1
+    globalScale: 0.01
     meshCompression: 0
     addColliders: 0
     useSRGBMaterialColor: 1
@@ -76,7 +97,7 @@ ModelImporter:
     secondaryUVAreaDistortion: 15.000001
     secondaryUVHardAngle: 88
     secondaryUVPackMargin: 4
-    useFileScale: 1
+    useFileScale: 0
   tangentSpace:
     normalSmoothAngle: 60
     normalImportMode: 0
@@ -98,7 +119,7 @@ ModelImporter:
     armStretch: 0.05
     legStretch: 0.05
     feetSpacing: 0
-    globalScale: 1
+    globalScale: 0.01
     rootMotionBoneName: 
     hasTranslationDoF: 0
     hasExtraRoot: 0
