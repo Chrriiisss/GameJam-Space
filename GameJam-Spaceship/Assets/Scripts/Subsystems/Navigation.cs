@@ -31,6 +31,6 @@ public class Navigation : MonoBehaviour, ISubsystem {
     }
 
     private void ActivateEffect() {
-
+        gameDirector.ModifyRNG(((float) maxHealth - componentHealth)/300);
     }
 }
