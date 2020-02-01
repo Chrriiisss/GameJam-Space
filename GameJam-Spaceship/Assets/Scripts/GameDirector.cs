@@ -14,11 +14,12 @@ public class GameDirector : MonoBehaviour {
     private readonly float minTimeBetweenAsteroids = 5f;
     private float timeSinceLastAsteroid = 0f;
     private float randomModifiers = 0f;
+    private int shipHealth = 20;
 
-    private GameController gameController;
+    private SubsystemController gameController;
 
     private void Start() {
-        gameController = GameObject.Find("Game Controller").GetComponent<GameController>();
+        gameController = GameObject.Find("SubsystemController").GetComponent<SubsystemController>();
         shieldsActive = true;
         distanceToEnd = 1000f;
         speed = baseSpeed;
@@ -29,7 +30,12 @@ public class GameDirector : MonoBehaviour {
             calculatedAsteroidChance = baseRNG + randomModifiers;
             if (Random.Range(0f, 1f) < calculatedAsteroidChance) {
                 timeSinceLastAsteroid = 0f;
-                DamageRandomSubsystem();
+                if (shieldsActive) {
+                    DamageRandomSubsystem();
+                }
+                else {
+                    DamageShip();
+                }
             }
         }
     }
@@ -69,5 +75,20 @@ public class GameDirector : MonoBehaviour {
                 iteration++;
             }
         }
+    }
+
+    private void DamageShip() {
+        this.shipHealth--;
+        if (shipHealth <= 0) {
+            GameOver();
+        }
+    }
+
+    private void GameOver() {
+        // IMPLEMENT
+    }
+
+    private void GameWin() {
+        // IMPLEMENT
     }
 }
