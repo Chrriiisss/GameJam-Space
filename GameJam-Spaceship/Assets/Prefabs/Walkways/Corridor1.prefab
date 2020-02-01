@@ -157,6 +157,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: CorridorStraight1
       objectReference: {fileID: 0}
+    - target: {fileID: -724270141783932088, guid: 0ebef396e78b8074ca5fe74471a35381,
+        type: 3}
+      propertyPath: m_Materials.Array.data[1]
+      value: 
+      objectReference: {fileID: 2100000, guid: 9113e1bdddeec6c478d571439cb13f6d, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0ebef396e78b8074ca5fe74471a35381, type: 3}
 --- !u!4 &4370415688866991134 stripped
