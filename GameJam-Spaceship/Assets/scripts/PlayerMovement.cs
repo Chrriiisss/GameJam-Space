@@ -6,6 +6,7 @@ public class PlayerMovement : MonoBehaviour
 {
 
   public CharacterController controller;
+  public Animator movementAnimator;
 
   public float speed = 12f;
   public float gravity = -9.81f;
@@ -22,6 +23,7 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
       isGrounded = Physics.CheckSphere(groundCheck.position, groundDistance, groundMask);
 
       if(isGrounded && velocity.y < 0)
@@ -33,6 +35,12 @@ public class PlayerMovement : MonoBehaviour
       float z = Input.GetAxis("Vertical");
 
       Vector3 move = transform.right * x + transform.forward * z;
+
+      if(x != 0f || z != 0f) {
+        movementAnimator.SetBool("walking", true);
+      } else {
+        movementAnimator.SetBool("walking", false);
+      }
         
       controller.Move(move * speed * Time.deltaTime);
     
