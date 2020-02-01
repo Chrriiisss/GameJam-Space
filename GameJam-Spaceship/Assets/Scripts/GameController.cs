@@ -21,7 +21,7 @@ public class GameController : MonoBehaviour {
         return this.shipHealth;
     }
 
-    List<ISubsystem> GetSubsystems() {
+    public List<ISubsystem> GetSubsystems() {
         return this.subsystems;
     }
 }

@@ -15,7 +15,10 @@ public class GameDirector : MonoBehaviour {
     private float timeSinceLastAsteroid = 0f;
     private float randomModifiers = 0f;
 
+    private GameController gameController;
+
     private void Start() {
+        gameController = GameObject.Find("Game Controller").GetComponent<GameController>();
         shieldsActive = true;
         distanceToEnd = 1000f;
         speed = baseSpeed;
@@ -53,6 +56,18 @@ public class GameDirector : MonoBehaviour {
     }
 
     private void DamageRandomSubsystem() {
-
+        List<ISubsystem> subsystems = gameController.GetSubsystems();
+        int choice = Random.Range(0, subsystems.Count);
+        int damage = Random.Range(10, 100);
+        int iteration = 0;
+        foreach (ISubsystem subsystem in subsystems) {
+            if (choice == iteration) {
+                subsystem.TakeDamage(damage);
+                return;
+            }
+            else {
+                iteration++;
+            }
+        }
     }
 }
