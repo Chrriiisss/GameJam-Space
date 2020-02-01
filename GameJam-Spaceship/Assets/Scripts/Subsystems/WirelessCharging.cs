@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class OxygenGenerator : MonoBehaviour, ISubsystem {
+public class WirelessCharging : MonoBehaviour, ISubsystem {
 
     private GameDirector gameDirector;
     private int componentHealth;

@@ -8,6 +8,14 @@ public class GameDirector : MonoBehaviour {
     private float modifiers = 0f;
     [SerializeField] private bool shieldsActive;
 
+    private void Start() {
+        shieldsActive = true;
+    }
+
+    private void Update() {
+        // Do Random Damage checks
+    }
+
     public void ModifyRNG(float amount) {
         modifiers += amount;
     }
@@ -16,12 +24,10 @@ public class GameDirector : MonoBehaviour {
         return baseRNG + modifiers;
     }
 
-    private void Start() {
-        shieldsActive = true;
+    public void SetShields(bool state) {
+        shieldsActive = state;
     }
 
-    private void Update() {
-        // Do Random Damage checks
-    }
+    
 
 }
