@@ -5,7 +5,7 @@ using UnityEngine;
 public class Engines : MonoBehaviour, ISubsystem { 
 
     private int componentHealth;
-    private readonly int maxHealth;
+    private readonly int maxHealth = 100;
 
      // Start is called before the first frame update
     void Start() {
