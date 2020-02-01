@@ -21,7 +21,7 @@ public class GameDirector : MonoBehaviour {
     private void Start() {
         gameController = GameObject.Find("SubsystemController").GetComponent<SubsystemController>();
         shieldsActive = true;
-        distanceToEnd = 1000f;
+        distanceToEnd = 180f;
         speed = baseSpeed;
     }
     
@@ -37,6 +37,15 @@ public class GameDirector : MonoBehaviour {
                     DamageShip();
                 }
             }
+        }
+        else {
+            timeSinceLastAsteroid += Time.deltaTime;
+        }
+        if (distanceToEnd <= 0) {
+            GameWin();
+        }
+        else {
+            distanceToEnd -= speed * Time.deltaTime;
         }
     }
 
