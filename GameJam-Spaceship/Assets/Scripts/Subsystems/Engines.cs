@@ -20,9 +20,7 @@ public class Engines : MonoBehaviour, ISubsystem {
 
     public void TakeDamage(int damageAmount) {
         this.componentHealth = Mathf.Max(0, this.componentHealth - damageAmount);
-        if (componentHealth == 0) {
-            ActivateEffect();
-        }
+        ActivateEffect();
     }
 
     public void Repair() {
@@ -31,6 +29,6 @@ public class Engines : MonoBehaviour, ISubsystem {
     }
 
     private void ActivateEffect() {
-
+        gameDirector.SetSpeed(maxHealth - componentHealth);
     }
 }

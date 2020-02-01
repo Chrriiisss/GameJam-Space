@@ -5,11 +5,16 @@ using UnityEngine;
 public class GameDirector : MonoBehaviour {
 
     [SerializeField] private readonly float baseRNG = 0.1f;
+    [SerializeField] private readonly float baseSpeed = 1f;
     private float modifiers = 0f;
     [SerializeField] private bool shieldsActive;
+    [SerializeField] private float distanceToEnd;
+    [SerializeField] private float speed;
 
     private void Start() {
         shieldsActive = true;
+        distanceToEnd = 1000f;
+        speed = baseSpeed;
     }
 
     private void Update() {
@@ -28,6 +33,13 @@ public class GameDirector : MonoBehaviour {
         shieldsActive = state;
     }
 
-    
+    public void SetSpeed(int speed) {
+        if (speed == 0) {
+            this.speed = baseSpeed;
+        }
+        else {
+            this.speed = baseSpeed / speed;
+        }
+    }
 
 }
