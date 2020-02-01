@@ -77,7 +77,7 @@ public class GameDirector : MonoBehaviour {
         int damage = Random.Range(10, 100);
         int iteration = 0;
         foreach (ISubsystem subsystem in subsystems) {
-            if (choice == iteration) {
+            if (choice == iteration && subsystem.GetHealth() > 0) {
                 subsystem.TakeDamage(damage);
                 return;
             }
@@ -85,6 +85,16 @@ public class GameDirector : MonoBehaviour {
                 iteration++;
             }
         }
+        // Damage first subsystem found with HP
+        foreach (ISubsystem subsystem in subsystems) {
+            if (subsystem.GetHealth() > 0) {
+                subsystem.TakeDamage(damage);
+                return;
+            }
+        }
+
+        // If all subsystems
+        DamageShip();
     }
 
     private void DamageShip() {
