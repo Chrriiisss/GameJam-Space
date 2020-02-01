@@ -2,8 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerMovement : MonoBehaviour
-{
+public class PlayerMovement : MonoBehaviour {
 
   public CharacterController controller;
   public Animator movementAnimator;
@@ -21,8 +20,7 @@ public class PlayerMovement : MonoBehaviour
   bool isGrounded;
 
     // Update is called once per frame
-    void Update()
-    {
+    void Update() {
 
       isGrounded = Physics.CheckSphere(groundCheck.position, groundDistance, groundMask);
 
@@ -44,9 +42,9 @@ public class PlayerMovement : MonoBehaviour
         
       controller.Move(move * speed * Time.deltaTime);
     
-      if(Input.GetButtonDown("Jump") && isGrounded)
-      {
-        velocity.y = Mathf.Sqrt(jumpHeight * -2f * gravity);
+      if(Input.GetButtonDown("Jump") && isGrounded) {
+            movementAnimator.Play("Jump");
+            velocity.y = Mathf.Sqrt(jumpHeight * -2f * gravity);
       }
 
       velocity.y += gravity * Time.deltaTime;
