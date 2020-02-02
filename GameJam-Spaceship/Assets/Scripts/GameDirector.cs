@@ -49,7 +49,7 @@ public class GameDirector : MonoBehaviour {
     private void Update()
     {
         if (timeToNextAsteroid < 0) {
-            float asteroidDelayModifier = 0.5f / (baseRNG + randomModifiers);
+            float asteroidDelayModifier = 0.5f / ((baseRNG + randomModifiers) * 1.7f);
             timeToNextAsteroid = Random.Range(5 + asteroidDelayModifier, 8 + asteroidDelayModifier);
             if (shieldsActive)
             {
@@ -111,7 +111,7 @@ public class GameDirector : MonoBehaviour {
         int choice = Random.Range(0, subsystems.Count - 1);
         Debug.Log("Choice: " + choice);
         Debug.Log("Count: " + subsystems.Count);
-        int damage = Random.Range(10, 100);
+        int damage = Random.Range(60, 100);
         int iteration = 0;
         foreach (ISubsystem subsystem in subsystems) {
             Debug.Log("Iteration: " + iteration);
@@ -141,7 +141,7 @@ public class GameDirector : MonoBehaviour {
     }
 
     private void DamageShip() {
-        this.shipHealth--;
+        this.shipHealth -= 7;
         if (shipHealth <= 0) {
             GameOver();
         }
