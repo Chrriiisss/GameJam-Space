@@ -11,11 +11,11 @@ public class GameDirector : MonoBehaviour {
     [SerializeField] private bool shieldsActive;
     [SerializeField] private float distanceToEnd;
     [SerializeField] private float speed;
+    [SerializeField] private int shipHealth = 20;
 
     private readonly float minTimeBetweenAsteroids = 5f;
     private float timeSinceLastAsteroid = 0f;
     private float randomModifiers = 0f;
-    private int shipHealth = 20;
 
     private SubsystemController gameController;
 
@@ -73,10 +73,13 @@ public class GameDirector : MonoBehaviour {
 
     private void DamageRandomSubsystem() {
         List<ISubsystem> subsystems = gameController.GetSubsystems();
-        int choice = Random.Range(0, subsystems.Count);
+        int choice = Random.Range(0, subsystems.Count - 1);
+        Debug.Log("Choice: " + choice);
+        Debug.Log("Count: " + subsystems.Count);
         int damage = Random.Range(10, 100);
         int iteration = 0;
         foreach (ISubsystem subsystem in subsystems) {
+            Debug.Log("Iteration: " + iteration);
             if (choice == iteration && subsystem.GetHealth() > 0) {
                 subsystem.TakeDamage(damage);
                 return;
