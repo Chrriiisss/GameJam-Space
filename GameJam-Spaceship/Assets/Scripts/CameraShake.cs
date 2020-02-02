@@ -66,7 +66,7 @@ public class CameraShake : MonoBehaviour
             if (smooth)
                 transform.localRotation = Quaternion.Lerp(transform.localRotation, Quaternion.Euler(rotationAmount), Time.deltaTime * smoothAmount);
             else
-                transform.Rotate((rotationAmount));//Set the local rotation the be the rotation amount.
+                transform.Rotate(rotationAmount);//Set the local rotation the be the rotation amount.
 
             yield return null;
         }

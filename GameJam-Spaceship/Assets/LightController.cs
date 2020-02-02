@@ -31,10 +31,10 @@ public class LightController : MonoBehaviour
             float rand_val = Random.Range(0, 100);
             if (rand_val > health + 20)
             {
-                if (rand_val > 95)
+                if (rand_val > 90 + health / 50)
                 {
                     flickering = true;
-                    timeToNextPossibleOccurrence = Random.Range(0.3f, 0.9f) + rand_val / 100;
+                    timeToNextPossibleOccurrence = Random.Range(1.0f, 1.7f) + rand_val / 100;
                 }
                 else
                 {
@@ -50,7 +50,7 @@ public class LightController : MonoBehaviour
                 {
                     light.intensity = 2;
                 }
-                timeToNextPossibleOccurrence = Random.Range(4, 13)  + health / 10;
+                timeToNextPossibleOccurrence = Random.Range(2, 7)  + health / 10;
             }
 
 
