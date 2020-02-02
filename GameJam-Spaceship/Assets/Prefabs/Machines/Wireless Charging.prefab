@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 6248386285245104181}
   - component: {fileID: 7666780292798286592}
   - component: {fileID: 4678907488587054302}
+  - component: {fileID: 100190259615294920}
   m_Layer: 0
   m_Name: Wireless Charging
   m_TagString: Untagged
@@ -59,6 +60,20 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 13.7
   m_Center: {x: 0, y: 2.25, z: 0}
+--- !u!114 &100190259615294920
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6248386285245104182}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a4c64f817c18fdc4e9f393538a1dc43d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  componentHealth: 0
+  visionBlackout: {fileID: 0}
 --- !u!1001 &6248386286716251436
 PrefabInstance:
   m_ObjectHideFlags: 0
