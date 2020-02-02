@@ -141,6 +141,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Wireless Charging
       objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 67620f0e3d518e84e83eaeec1b567f77,
+        type: 3}
+      propertyPath: m_TagString
+      value: Machine
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 67620f0e3d518e84e83eaeec1b567f77, type: 3}
 --- !u!4 &1426531633552246326 stripped

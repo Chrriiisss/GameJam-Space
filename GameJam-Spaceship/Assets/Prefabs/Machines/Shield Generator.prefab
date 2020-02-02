@@ -139,6 +139,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Shield Generator
       objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: ceff1364d5de66b4ab116b01b2287571,
+        type: 3}
+      propertyPath: m_TagString
+      value: Machine
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ceff1364d5de66b4ab116b01b2287571, type: 3}
 --- !u!4 &4403193767298923116 stripped

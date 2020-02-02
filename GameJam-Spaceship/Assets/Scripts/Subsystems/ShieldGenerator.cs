@@ -47,4 +47,9 @@ public class ShieldGenerator : MonoBehaviour, ISubsystem {
     {
         return componentHealth * 100 / maxHealth;
     }
+
+    public string GetDescription()
+    {
+        return "Avoids damage to the hull";
+    }
 }

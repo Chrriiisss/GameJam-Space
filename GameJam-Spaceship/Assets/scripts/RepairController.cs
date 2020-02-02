@@ -26,7 +26,7 @@ public class RepairController : MonoBehaviour
         RaycastHit hit;
 
          if(Physics.Raycast(CameraCenter, cam.transform.forward, out hit, detectDistance)     &&
-                     hit.collider.gameObject.CompareTag("Repairable")) {
+                     (hit.collider.gameObject.CompareTag("Machine") || hit.collider.transform.GetChild(0).CompareTag("Machine"))) {
  
                    cogs.SetActive(true);
                    Debug.Log(hit.transform.name);

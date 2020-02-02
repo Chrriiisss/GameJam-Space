@@ -191,6 +191,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: OxygenGenerator
       objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 30628846ceabf1b46ae3626f5731631a,
+        type: 3}
+      propertyPath: m_TagString
+      value: Machine
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 30628846ceabf1b46ae3626f5731631a, type: 3}
 --- !u!1 &4202821177739479679 stripped

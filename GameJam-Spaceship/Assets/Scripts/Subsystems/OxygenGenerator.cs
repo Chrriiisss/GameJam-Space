@@ -47,4 +47,9 @@ public class OxygenGenerator : MonoBehaviour, ISubsystem {
     {
         return componentHealth * 100 / maxHealth;
     }
+
+    public string GetDescription()
+    {
+        return "Improves pilot's avoidance skillss";
+    }
 }

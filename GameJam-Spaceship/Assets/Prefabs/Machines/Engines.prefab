@@ -181,6 +181,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Engines
       objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 66177890b7bea7143964343d2ecb9e96,
+        type: 3}
+      propertyPath: m_TagString
+      value: Machine
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 66177890b7bea7143964343d2ecb9e96, type: 3}
 --- !u!4 &7693727804060684759 stripped

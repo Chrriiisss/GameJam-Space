@@ -48,4 +48,9 @@ public class WirelessCharging : MonoBehaviour, ISubsystem {
     {
         return componentHealth * 100 / maxHealth;
     }
+
+    public string GetDescription()
+    {
+        return "Controls lighting on the ship";
+    }
 }
