@@ -11,7 +11,5 @@ public class ProgressController : MonoBehaviour
     void FixedUpdate()
     {
         tick.localPosition = new Vector2(500*currentProgress - 250f, 20f);
-
-        currentProgress += 0.0001f;
     }
 }

@@ -312,6 +312,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &579924424 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5661584651966278172, guid: 733ab3605b4900041acfa3e03b769e29,
+    type: 3}
+  m_PrefabInstance: {fileID: 626760194633350949}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &599068505
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -948,6 +954,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 99a87d9df6c60534e8e731070686465a, type: 3}
+--- !u!1 &1391078865 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 626760196360405145, guid: 733ab3605b4900041acfa3e03b769e29,
+    type: 3}
+  m_PrefabInstance: {fileID: 626760194633350949}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &1520416107 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 626760196059372481, guid: 733ab3605b4900041acfa3e03b769e29,
@@ -979,6 +991,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4262237374957474716, guid: 5e6449e4bc4d5364eafb02447708d213,
+        type: 3}
+      propertyPath: progressBar
+      value: 
+      objectReference: {fileID: 1391078865}
+    - target: {fileID: 4262237374957474716, guid: 5e6449e4bc4d5364eafb02447708d213,
+        type: 3}
+      propertyPath: healthBar
+      value: 
+      objectReference: {fileID: 579924424}
     - target: {fileID: 4262237374957474717, guid: 5e6449e4bc4d5364eafb02447708d213,
         type: 3}
       propertyPath: m_Name

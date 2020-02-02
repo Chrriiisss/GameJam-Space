@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Assertions.Must;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class GameDirector : MonoBehaviour {
 
@@ -16,6 +17,11 @@ public class GameDirector : MonoBehaviour {
     private int shipHealthMax = 20;
 
     public AudioClip[] clips;
+
+
+    public GameObject progressBar;
+    public GameObject healthBar;
+
 
     private float timeToNextAsteroid = 2.0f;
 
@@ -66,6 +72,11 @@ public class GameDirector : MonoBehaviour {
         else {
             distanceToEnd -= speed * Time.deltaTime;
         }
+
+        progressBar.GetComponent<ProgressController>().currentProgress = (180f - distanceToEnd) / 180f;
+
+        healthBar.GetComponentInChildren<Text>().text = shipHealth + "";
+
     }
 
     public void ModifyRNG(float amount) {
