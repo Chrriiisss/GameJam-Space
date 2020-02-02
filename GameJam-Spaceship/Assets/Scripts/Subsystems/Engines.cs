@@ -33,7 +33,7 @@ public class Engines : MonoBehaviour, ISubsystem {
         gameDirector.SetSpeed(maxHealth - componentHealth);
     }
 
-    public string ToString()
+    public override string ToString()
     {
         return "Engine";
     }

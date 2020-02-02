@@ -34,7 +34,7 @@ public class OxygenGenerator : MonoBehaviour, ISubsystem {
         gameDirector.ModifyRNG(((float)maxHealth - componentHealth) / 200);
     }
 
-    public string ToString()
+    public override string ToString()
     {
         return "Oxygen Generator";
     }

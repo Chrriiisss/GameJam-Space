@@ -34,7 +34,7 @@ public class ShieldGenerator : MonoBehaviour, ISubsystem {
         gameDirector.SetShields(componentHealth != 0);
     }
 
-    public string ToString()
+    public override string ToString()
     {
         return "Shield Generator";
     }

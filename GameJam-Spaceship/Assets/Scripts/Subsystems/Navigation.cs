@@ -34,7 +34,7 @@ public class Navigation : MonoBehaviour, ISubsystem {
         gameDirector.ModifyRNG(((float) maxHealth - componentHealth)/300);
     }
 
-    public string ToString()
+    public override string ToString()
     {
         return "Navigation Unit";
     }

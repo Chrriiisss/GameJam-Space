@@ -35,7 +35,7 @@ public class WirelessCharging : MonoBehaviour, ISubsystem {
         // this.visionBlackout.GetComponent<RectTransform>().sizeDelta = new Vector2(2000f * size, 2000f * size);
     }
 
-    public string ToString()
+    public override string ToString()
     {
         return "Lighting System";
     }

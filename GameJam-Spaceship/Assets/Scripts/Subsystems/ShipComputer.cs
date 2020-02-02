@@ -34,7 +34,7 @@ public class ShipComputer : MonoBehaviour, ISubsystem {
 
     }
 
-    public string ToString()
+    public override string ToString()
     {
         return "Ship Computer";
     }
