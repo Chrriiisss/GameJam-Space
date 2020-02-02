@@ -50,6 +50,6 @@ public class OxygenGenerator : MonoBehaviour, ISubsystem {
 
     public string GetDescription()
     {
-        return "Improves pilot's avoidance skillss";
+        return "Improves pilot's avoidance skills";
     }
 }
