@@ -8,7 +8,7 @@ public class LightController : MonoBehaviour
 
     private WirelessCharging charger;
 
-    private float timeToNextPossibleOccurrence = 0;
+    public float timeToNextPossibleOccurrence = 0;
     private Light light;
     private bool flickering = false;
     private float flickerTimer = 0;
@@ -25,7 +25,7 @@ public class LightController : MonoBehaviour
     {
         flickerTimer -= Time.deltaTime;
         timeToNextPossibleOccurrence -= Time.deltaTime;
-        float health = charger.maxHealth - charger.componentHealth;
+        float health = charger.GetPercentHealth();
         if ( timeToNextPossibleOccurrence < 0 && health < 90)
         {
             float rand_val = Random.Range(0, 100);
@@ -34,13 +34,13 @@ public class LightController : MonoBehaviour
                 if (rand_val > 90 + health / 50)
                 {
                     flickering = true;
-                    timeToNextPossibleOccurrence = Random.Range(1.0f, 1.7f) + rand_val / 100;
+                    timeToNextPossibleOccurrence = Random.Range(1.0f, 1.7f) + ((rand_val / 100) - health);
                 }
                 else
                 {
-                    light.intensity = health / 80;
+                    light.intensity = health / 80 + 0.1f;
                     flickering = false;
-                    timeToNextPossibleOccurrence = Random.Range(1, 6) * health / 10;
+                    timeToNextPossibleOccurrence = Random.Range(1, 6) + health / 10;
                 }
             }
             else
@@ -52,15 +52,15 @@ public class LightController : MonoBehaviour
                 }
                 timeToNextPossibleOccurrence = Random.Range(2, 7)  + health / 10;
             }
-
-
         }
         else if (health >= 90)
         {
+            flickering = false;
             if (light.intensity < 2.0f)
             {
                 light.intensity = 2.0f;
             }
+            timeToNextPossibleOccurrence = Random.Range(2, 7) + health / 10;
         }
         else if(flickering)
         {
