@@ -107,15 +107,15 @@ public class GameDirector : MonoBehaviour {
                 iteration++;
             }
         }
-        // Damage first subsystem found with HP
-        //foreach (ISubsystem subsystem in subsystems)
-        //{
-        //    if (subsystem.GetHealth() > 0)
-        //    {
-        //        subsystem.TakeDamage(damage);
-        //        return;
-        //    }
-        //}
+        //Damage first subsystem found with HP
+        foreach (ISubsystem subsystem in subsystems)
+        {
+            if (subsystem.GetHealth() > 0)
+            {
+                subsystem.TakeDamage(damage);
+                return;
+            }
+        }
 
         // If all subsystems
         DamageShip();

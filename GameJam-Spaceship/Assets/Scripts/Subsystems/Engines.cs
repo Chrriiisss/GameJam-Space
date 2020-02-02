@@ -46,4 +46,9 @@ public class Engines : MonoBehaviour, ISubsystem {
     {
         return componentHealth * 100 / maxHealth;
     }
+
+    public string GetDescription()
+    {
+        return "Affects speed of travel";
+    }
 }

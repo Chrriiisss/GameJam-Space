@@ -47,4 +47,9 @@ public class ShipComputer : MonoBehaviour, ISubsystem {
     {
         return componentHealth * 100/ maxHealth;
     }
+
+    public string GetDescription()
+    {
+        return "Allows other systems to function";
+    }
 }
