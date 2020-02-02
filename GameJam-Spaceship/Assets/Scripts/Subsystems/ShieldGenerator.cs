@@ -28,6 +28,10 @@ public class ShieldGenerator : MonoBehaviour, ISubsystem {
     public void Repair() {
         this.componentHealth = maxHealth;
         ActivateEffect();
+        if (GetPercentHealth() == 100)
+        {
+            WindowsVoice.speak("The " + ToString() + " has been repaired");
+        }
     }
 
     private void ActivateEffect() {
