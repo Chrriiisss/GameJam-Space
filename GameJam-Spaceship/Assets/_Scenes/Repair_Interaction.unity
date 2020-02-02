@@ -811,7 +811,7 @@ PrefabInstance:
     - target: {fileID: 810666341534402687, guid: 50367d9da065f1b4797d4f6b5ed467c2,
         type: 3}
       propertyPath: m_TagString
-      value: Repairable
+      value: Machine
       objectReference: {fileID: 0}
     - target: {fileID: 6388578143554012776, guid: 50367d9da065f1b4797d4f6b5ed467c2,
         type: 3}
@@ -1139,7 +1139,12 @@ PrefabInstance:
     - target: {fileID: 2708729558133879845, guid: 8135a846608a7f04a9a9ab9102174f64,
         type: 3}
       propertyPath: m_TagString
-      value: Repairable
+      value: Machine
+      objectReference: {fileID: 0}
+    - target: {fileID: 4678907488587054302, guid: 8135a846608a7f04a9a9ab9102174f64,
+        type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6248386285245104181, guid: 8135a846608a7f04a9a9ab9102174f64,
         type: 3}
@@ -1354,6 +1359,14 @@ PrefabInstance:
       objectReference: {fileID: 1312327329}
     - target: {fileID: 890330397, guid: cc7267a1bb5b0584482b543100906dde, type: 3}
       propertyPath: detectDistance
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 890330397, guid: cc7267a1bb5b0584482b543100906dde, type: 3}
+      propertyPath: cam
+      value: 
+      objectReference: {fileID: 414664366}
+    - target: {fileID: 890330397, guid: cc7267a1bb5b0584482b543100906dde, type: 3}
+      propertyPath: center
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 1753392962836181008, guid: cc7267a1bb5b0584482b543100906dde,

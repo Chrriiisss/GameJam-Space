@@ -18,7 +18,7 @@ public class SubsystemController : MonoBehaviour {
         this.subsystems.Add(GameObject.Find("Engines").GetComponent<Engines>());
         this.subsystems.Add(GameObject.Find("Ship Computer").GetComponent<ShipComputer>());*/
 
-        Debug.Log("I Hate Everything");
+        //Debug.Log("I Hate Everything");
     }
 
     public List<ISubsystem> GetSubsystems() {
@@ -43,7 +43,7 @@ public class SubsystemController : MonoBehaviour {
 
 
         foreach(GameObject sys in subsystems) {
-            Debug.Log(sys.name);
+           // Debug.Log(sys.name);
         }
     }
 
