@@ -32,6 +32,14 @@ public class RepairController : MonoBehaviour
  
                    cogs.SetActive(true);
                    Debug.Log(hit.transform.name);
+
+                   Debug.Log(hit.transform.GetComponentInParent<ISubsystem>().GetHealth());
+
+                    if(Input.GetKeyUp("Use")){
+                        Debug.Log("Click");
+                        hit.transform.GetComponentInParent<ISubsystem>().Repair();
+                    }
+                   
                     
             } else {
                 cogs.SetActive(false);
@@ -41,4 +49,7 @@ public class RepairController : MonoBehaviour
 
          
     }
+
+
+
 }
