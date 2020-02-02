@@ -13,34 +13,51 @@ public class GameDirector : MonoBehaviour {
     [SerializeField] private float speed;
     [SerializeField] private int shipHealth = 20;
 
-    private readonly float minTimeBetweenAsteroids = 5f;
-    private float timeSinceLastAsteroid = 0f;
+
+    public AudioClip[] clips;
+
+    private float timeToNextAsteroid = 0.0f;
+
     private float randomModifiers = 0f;
 
     private SubsystemController gameController;
+    private CameraShake shaker;
+    private AudioSource source;
 
     private void Start() {
         gameController = GameObject.Find("SubsystemController").GetComponent<SubsystemController>();
+        shaker = GameObject.Find("PlayerCamera").GetComponent<CameraShake>();
+        source = GetComponent<AudioSource>();
+        shaker.ShakeCamera(7,10);
         shieldsActive = true;
         distanceToEnd = 180f;
         speed = baseSpeed;
     }
-    
-    private void Update() {
-        if (timeSinceLastAsteroid > minTimeBetweenAsteroids) {
-            calculatedAsteroidChance = baseRNG + randomModifiers;
-            if (Random.Range(0f, 1f) < calculatedAsteroidChance) {
-                timeSinceLastAsteroid = 0f;
-                if (shieldsActive) {
-                    DamageRandomSubsystem();
-                }
-                else {
-                    DamageShip();
-                }
+
+    private void FixedUpdate()
+    {
+        timeToNextAsteroid = timeToNextAsteroid - Time.deltaTime;
+    }
+
+    private void Update()
+    {
+        if (timeToNextAsteroid < 0) {
+            float asteroidDelayModifier = 0.5f / (baseRNG + randomModifiers);
+            timeToNextAsteroid = Random.Range(5 + asteroidDelayModifier, 8 + asteroidDelayModifier);
+            if (shieldsActive)
+            {
+                DamageRandomSubsystem();
+                shaker.ShakeCamera(3, 3);
+                source.clip = clips[Random.Range(0, clips.Length - 1)];
+                source.Play();
             }
-        }
-        else {
-            timeSinceLastAsteroid += Time.deltaTime;
+            else
+            {
+                DamageShip();
+                shaker.ShakeCamera(5, 5);
+                source.clip = clips[Random.Range(0, clips.Length - 1)];
+                source.Play();
+            }
         }
         if (distanceToEnd <= 0) {
             GameWin();

@@ -10,6 +10,10 @@ GameObject:
   m_Component:
   - component: {fileID: 3440513042754572493}
   - component: {fileID: 3440513042754572494}
+  - component: {fileID: 7336929707101142259}
+  - component: {fileID: 4722238323765966332}
+  - component: {fileID: 3983827875418870268}
+  - component: {fileID: 4154119799588041532}
   m_Layer: 0
   m_Name: Engines
   m_TagString: Untagged
@@ -43,8 +47,60 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.1, y: 9.81, z: 13.94}
-  m_Center: {x: -1.97, y: 0, z: 0}
+  m_Size: {x: 0.1, y: 5.01, z: 13.94}
+  m_Center: {x: -1.97, y: 2.71, z: 0}
+--- !u!65 &7336929707101142259
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3440513042754572492}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 4.09, y: 4.47, z: 0.1}
+  m_Center: {x: -0.03, y: 2.52, z: -7.15}
+--- !u!65 &4722238323765966332
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3440513042754572492}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 4.09, y: 4.47, z: 0.1}
+  m_Center: {x: -0.03, y: 2.52, z: 6.61}
+--- !u!114 &3983827875418870268
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3440513042754572492}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: acace74bce319a648b6d2422f0edfd19, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  soundEffect: {fileID: 8300000, guid: 9e6b72bdd70b48a4dad8727909a2b703, type: 3}
+--- !u!135 &4154119799588041532
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3440513042754572492}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 14.04
+  m_Center: {x: 0, y: 1.36, z: 0}
 --- !u!1001 &3440513042613074637
 PrefabInstance:
   m_ObjectHideFlags: 0

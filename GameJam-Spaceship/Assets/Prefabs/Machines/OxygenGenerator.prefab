@@ -30,6 +30,8 @@ GameObject:
   - component: {fileID: 5292440404220046901}
   - component: {fileID: 5292440404220046900}
   - component: {fileID: 5292440404220046890}
+  - component: {fileID: 7638623414910859427}
+  - component: {fileID: 2701744045094959789}
   m_Layer: 0
   m_Name: OxygenGenerator
   m_TagString: Untagged
@@ -82,6 +84,32 @@ CapsuleCollider:
   m_Height: 3.79
   m_Direction: 1
   m_Center: {x: 0, y: 1.23, z: 0}
+--- !u!114 &7638623414910859427
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5292440404220046891}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: acace74bce319a648b6d2422f0edfd19, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  soundEffect: {fileID: 8300000, guid: 18b7bf72523b6c5409accf1a4884b55f, type: 3}
+--- !u!135 &2701744045094959789
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5292440404220046891}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 8.03
+  m_Center: {x: 0, y: 1.14, z: 0}
 --- !u!1001 &5292440403267146614
 PrefabInstance:
   m_ObjectHideFlags: 0

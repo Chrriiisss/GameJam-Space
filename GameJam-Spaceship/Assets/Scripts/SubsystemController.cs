@@ -16,6 +16,7 @@ public class SubsystemController : MonoBehaviour {
     }
 
     public List<ISubsystem> GetSubsystems() {
+        Debug.Log("Found " + subsystems.Count + " Subsystems");
         return this.subsystems;
     }
 }
