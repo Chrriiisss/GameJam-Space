@@ -7,11 +7,8 @@ public class RepairController : MonoBehaviour
 
     private Camera cam;
 
-    public Canvas canvas;
 
-    public GameObject healthBarPre;
-
-    public bool showing = false;
+    public GameObject cogs;
     
     
     public float detectDistance = 100f;
@@ -27,19 +24,17 @@ public class RepairController : MonoBehaviour
         
 
         Vector3 CameraCenter = cam.ScreenToWorldPoint(new Vector3(Screen.width/2f, Screen.height/2f, cam.nearClipPlane));
-        
+        Debug.DrawRay(CameraCenter, cam.transform.forward, Color.green, detectDistance);
         RaycastHit hit;
 
          if(Physics.Raycast(CameraCenter, cam.transform.forward, out hit, detectDistance)     &&
                      hit.collider.gameObject.CompareTag("Repairable")) {
  
-                    if(!showing) {
-                        GameObject healthBar = Instantiate(healthBarPre, new Vector3(0,0,0), Quaternion.identity, canvas.transform);
-                        healthBar.transform.position = new Vector3(0,0,0);
-                        
-                    }
-                    showing = true;
+                   cogs.SetActive(true);
+                   Debug.Log(hit.transform.name);
                     
+            } else {
+                cogs.SetActive(false);
             }
 
              
