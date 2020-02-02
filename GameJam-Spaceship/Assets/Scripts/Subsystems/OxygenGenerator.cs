@@ -5,7 +5,7 @@ using UnityEngine;
 public class OxygenGenerator : MonoBehaviour, ISubsystem {
 
     private GameDirector gameDirector;
-    private int componentHealth;
+    [SerializeField] private int componentHealth;
     private readonly int maxHealth = 100;
 
     // Start is called before the first frame update
