@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 4722238323765966332}
   - component: {fileID: 3983827875418870268}
   - component: {fileID: 4154119799588041532}
+  - component: {fileID: 6105428091226652644}
   m_Layer: 0
   m_Name: Engines
   m_TagString: Untagged
@@ -101,6 +102,18 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 14.04
   m_Center: {x: 0, y: 1.36, z: 0}
+--- !u!114 &6105428091226652644
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3440513042754572492}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f6c06b51001f0a44184bf50037dcb0c1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &3440513042613074637
 PrefabInstance:
   m_ObjectHideFlags: 0

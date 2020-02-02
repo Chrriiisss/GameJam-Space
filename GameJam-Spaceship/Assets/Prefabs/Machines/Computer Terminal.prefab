@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 7796027593686565891}
   - component: {fileID: 8710483263826353955}
   - component: {fileID: 8193365500943674936}
+  - component: {fileID: 8452561718697454993}
   m_Layer: 0
   m_Name: Computer Terminal
   m_TagString: Untagged
@@ -59,6 +60,18 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 11.87
   m_Center: {x: 0, y: 2.92, z: 0}
+--- !u!114 &8452561718697454993
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7796027593686565900}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 64c9aa23c14e0d546b836abfaad1a681, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &7796027595127564419
 PrefabInstance:
   m_ObjectHideFlags: 0

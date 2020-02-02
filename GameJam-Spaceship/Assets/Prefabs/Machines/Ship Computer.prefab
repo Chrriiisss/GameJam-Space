@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 6197997653388454581}
   - component: {fileID: 6216827994255368894}
   - component: {fileID: 6894984068469504073}
+  - component: {fileID: 703709342001746571}
   m_Layer: 0
   m_Name: Ship Computer
   m_TagString: Untagged
@@ -59,6 +60,18 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 10.41
   m_Center: {x: 0, y: 1.53, z: 0}
+--- !u!114 &703709342001746571
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6197997653388454582}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 41d19e5f7005ba8428b21d5e172bef88, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &6197997654671704547
 PrefabInstance:
   m_ObjectHideFlags: 0
