@@ -274,8 +274,8 @@ GameObject:
   m_Component:
   - component: {fileID: 5654822932173886282}
   - component: {fileID: 5654822932173886281}
-  - component: {fileID: 5654822932173886283}
   - component: {fileID: 8146815068334518957}
+  - component: {fileID: 221203434}
   m_Layer: 0
   m_Name: Player 2
   m_TagString: Untagged
@@ -320,28 +320,6 @@ CharacterController:
   m_SkinWidth: 0.08
   m_MinMoveDistance: 0.001
   m_Center: {x: 0, y: 2, z: 0}
---- !u!114 &5654822932173886283
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5654822932173886280}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 92f5aeb3530fb4adb8faa94a295d48d0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  controller: {fileID: 5654822932173886281}
-  movementAnimator: {fileID: 5654822932232733528}
-  speed: 12
-  gravity: -18
-  jumpHeight: 3
-  groundCheck: {fileID: 5654822932282125028}
-  groundDistance: 0.2
-  groundMask:
-    serializedVersion: 2
-    m_Bits: 512
 --- !u!82 &8146815068334518957
 AudioSource:
   m_ObjectHideFlags: 0
@@ -438,6 +416,28 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &221203434
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5654822932173886280}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: af120227ffdd5c64e837097b03e27f74, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  controller: {fileID: 5654822932173886281}
+  movementAnimator: {fileID: 5654822932232733528}
+  speed: 12
+  gravity: -18
+  jumpHeight: 3
+  groundCheck: {fileID: 5654822932282125028}
+  groundDistance: 0.2
+  groundMask:
+    serializedVersion: 2
+    m_Bits: 512
 --- !u!1 &5654822932282125027
 GameObject:
   m_ObjectHideFlags: 0
@@ -479,9 +479,9 @@ GameObject:
   - component: {fileID: 5654822933689788696}
   - component: {fileID: 5654822933689788679}
   - component: {fileID: 5654822933689788678}
-  - component: {fileID: 5654822933689788697}
   - component: {fileID: 3229163684448760620}
   - component: {fileID: 3870861274894674053}
+  - component: {fileID: 1733185648}
   m_Layer: 0
   m_Name: PlayerCamera
   m_TagString: MainCamera
@@ -522,9 +522,9 @@ Camera:
   m_FocalLength: 50
   m_NormalizedViewPortRect:
     serializedVersion: 2
-    x: 0
+    x: 0.5
     y: 0
-    width: 1
+    width: 0.5
     height: 1
   near clip plane: 0.01
   far clip plane: 1000
@@ -554,20 +554,6 @@ AudioListener:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5654822933689788677}
   m_Enabled: 1
---- !u!114 &5654822933689788697
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5654822933689788677}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 98b62dd9b825e43888d72adc2b916909, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  mouseSensitivity: 100
-  playerBody: {fileID: 5654822932173886282}
 --- !u!114 &3229163684448760620
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -600,6 +586,20 @@ MonoBehaviour:
   canvasObject: {fileID: 6897331711366652512}
   machineName: {fileID: 5205213687586984623}
   detectDistance: 10
+--- !u!114 &1733185648
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5654822933689788677}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 27ee7d582f604e34583d10c700bc9f2e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mouseSensitivity: 100
+  playerBody: {fileID: 5654822932173886282}
 --- !u!1 &7438337386900142008
 GameObject:
   m_ObjectHideFlags: 0

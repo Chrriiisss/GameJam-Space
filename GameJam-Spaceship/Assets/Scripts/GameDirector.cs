@@ -28,12 +28,12 @@ public class GameDirector : MonoBehaviour {
     private float randomModifiers = 0f;
 
     private SubsystemController gameController;
-    private CameraShake shaker;
+    private CameraShake[] shakers;
     private AudioSource source;
 
     private void Start() {
         gameController = GameObject.Find("SubsystemController").GetComponent<SubsystemController>();
-        shaker = GameObject.Find("PlayerCamera").GetComponent<CameraShake>();
+        shakers = GameObject.FindObjectsOfType<CameraShake>();
         source = GetComponent<AudioSource>();
         shieldsActive = true;
         distanceToEnd = 180f;
@@ -54,14 +54,20 @@ public class GameDirector : MonoBehaviour {
             if (shieldsActive)
             {
                 DamageRandomSubsystem();
-                shaker.ShakeCamera(3, 3);
+                foreach (CameraShake shaker in shakers)
+                {
+                    shaker.ShakeCamera(3, 3);
+                }
                 source.clip = clips[Random.Range(0, clips.Length - 1)];
                 source.Play();
             }
             else
             {
                 DamageShip();
-                shaker.ShakeCamera(5, 5);
+                foreach (CameraShake shaker in shakers)
+                {
+                    shaker.ShakeCamera(5, 5);
+                }
                 source.clip = clips[Random.Range(0, clips.Length - 1)];
                 source.Play();
             }

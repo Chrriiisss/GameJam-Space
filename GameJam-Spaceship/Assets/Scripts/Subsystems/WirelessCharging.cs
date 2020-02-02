@@ -36,6 +36,11 @@ public class WirelessCharging : MonoBehaviour, ISubsystem {
 
     private void ActivateEffect() {
         float size = (maxHealth - componentHealth) / 100f;
+        LightController[] lights = FindObjectsOfType<LightController>();
+        foreach (LightController light in lights)
+        {
+            light.timeToNextPossibleOccurrence /= 2.0f;
+        }
         // this.visionBlackout.GetComponent<RectTransform>().sizeDelta = new Vector2(2000f * size, 2000f * size);
     }
 
