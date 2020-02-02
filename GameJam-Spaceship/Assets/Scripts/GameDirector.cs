@@ -29,7 +29,6 @@ public class GameDirector : MonoBehaviour {
         gameController = GameObject.Find("SubsystemController").GetComponent<SubsystemController>();
         shaker = GameObject.Find("PlayerCamera").GetComponent<CameraShake>();
         source = GetComponent<AudioSource>();
-        shaker.ShakeCamera(7,10);
         shieldsActive = true;
         distanceToEnd = 180f;
         speed = baseSpeed;

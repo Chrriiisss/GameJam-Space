@@ -27,13 +27,17 @@ public class Engines : MonoBehaviour, ISubsystem {
     public void Repair() {
         this.componentHealth = maxHealth;
         ActivateEffect();
+        if (GetPercentHealth() == 100)
+        {
+            WindowsVoice.speak("The " + ToString() + " has been repaired");
+        }
     }
 
     private void ActivateEffect() {
         gameDirector.SetSpeed(maxHealth - componentHealth);
     }
 
-    public string ToString()
+    public override string ToString()
     {
         return "Engine";
     }

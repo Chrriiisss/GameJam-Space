@@ -28,13 +28,17 @@ public class ShieldGenerator : MonoBehaviour, ISubsystem {
     public void Repair() {
         this.componentHealth = maxHealth;
         ActivateEffect();
+        if (GetPercentHealth() == 100)
+        {
+            WindowsVoice.speak("The " + ToString() + " has been repaired");
+        }
     }
 
     private void ActivateEffect() {
         gameDirector.SetShields(componentHealth != 0);
     }
 
-    public string ToString()
+    public override string ToString()
     {
         return "Shield Generator";
     }

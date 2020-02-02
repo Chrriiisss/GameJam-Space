@@ -28,13 +28,17 @@ public class Navigation : MonoBehaviour, ISubsystem {
     public void Repair() {
         this.componentHealth = maxHealth;
         ActivateEffect();
+        if (GetPercentHealth() == 100)
+        {
+            WindowsVoice.speak("The " + ToString() + " has been repaired");
+        }
     }
 
     private void ActivateEffect() {
         gameDirector.ModifyRNG(((float) maxHealth - componentHealth)/300);
     }
 
-    public string ToString()
+    public override string ToString()
     {
         return "Navigation Unit";
     }

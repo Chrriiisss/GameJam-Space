@@ -21,8 +21,6 @@ public class RepairController : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-        
-
         Vector3 CameraCenter = cam.ScreenToWorldPoint(new Vector3(Screen.width/2f, Screen.height/2f, cam.nearClipPlane));
         Debug.DrawRay(CameraCenter, cam.transform.forward, Color.green, detectDistance);
         RaycastHit hit;
