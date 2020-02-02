@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -30,5 +31,15 @@ public class Engines : MonoBehaviour, ISubsystem {
 
     private void ActivateEffect() {
         gameDirector.SetSpeed(maxHealth - componentHealth);
+    }
+
+    public string ToString()
+    {
+        return "Engine";
+    }
+
+    public int GetPercentHealth()
+    {
+        return componentHealth * 100 / maxHealth;
     }
 }

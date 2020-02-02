@@ -33,4 +33,14 @@ public class ShieldGenerator : MonoBehaviour, ISubsystem {
     private void ActivateEffect() {
         gameDirector.SetShields(componentHealth != 0);
     }
+
+    public string ToString()
+    {
+        return "Shield Generator";
+    }
+
+    public int GetPercentHealth()
+    {
+        return componentHealth * 100 / maxHealth;
+    }
 }

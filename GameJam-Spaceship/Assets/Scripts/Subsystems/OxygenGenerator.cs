@@ -33,4 +33,14 @@ public class OxygenGenerator : MonoBehaviour, ISubsystem {
     private void ActivateEffect() {
         gameDirector.ModifyRNG(((float)maxHealth - componentHealth) / 200);
     }
+
+    public string ToString()
+    {
+        return "Oxygen Generator";
+    }
+
+    public int GetPercentHealth()
+    {
+        return componentHealth * 100 / maxHealth;
+    }
 }

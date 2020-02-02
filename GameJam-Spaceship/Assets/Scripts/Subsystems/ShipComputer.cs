@@ -33,4 +33,14 @@ public class ShipComputer : MonoBehaviour, ISubsystem {
     private void ActivateEffect() {
 
     }
+
+    public string ToString()
+    {
+        return "Ship Computer";
+    }
+
+    public int GetPercentHealth()
+    {
+        return componentHealth * 100/ maxHealth;
+    }
 }

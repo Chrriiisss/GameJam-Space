@@ -33,4 +33,14 @@ public class Navigation : MonoBehaviour, ISubsystem {
     private void ActivateEffect() {
         gameDirector.ModifyRNG(((float) maxHealth - componentHealth)/300);
     }
+
+    public string ToString()
+    {
+        return "Navigation Unit";
+    }
+
+    public int GetPercentHealth()
+    {
+        return componentHealth * 100 / maxHealth;
+    }
 }

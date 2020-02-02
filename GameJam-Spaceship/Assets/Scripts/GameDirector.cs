@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Assertions.Must;
 using UnityEngine.SceneManagement;
 
 public class GameDirector : MonoBehaviour {
@@ -11,8 +12,8 @@ public class GameDirector : MonoBehaviour {
     [SerializeField] private bool shieldsActive;
     [SerializeField] private float distanceToEnd;
     [SerializeField] private float speed;
-    [SerializeField] private int shipHealth = 20;
-
+    [SerializeField] private int shipHealth;
+    private int shipHealthMax = 20;
 
     public AudioClip[] clips;
 
@@ -32,6 +33,7 @@ public class GameDirector : MonoBehaviour {
         shieldsActive = true;
         distanceToEnd = 180f;
         speed = baseSpeed;
+        shipHealth = shipHealthMax;
     }
 
     private void FixedUpdate()
@@ -99,6 +101,7 @@ public class GameDirector : MonoBehaviour {
             Debug.Log("Iteration: " + iteration);
             if (choice == iteration && subsystem.GetHealth() > 0) {
                 subsystem.TakeDamage(damage);
+                WindowsVoice.speak("The " + subsystem.ToString() + " is at " + subsystem.GetPercentHealth() + "% health");
                 return;
             }
             else {
@@ -106,15 +109,18 @@ public class GameDirector : MonoBehaviour {
             }
         }
         // Damage first subsystem found with HP
-        foreach (ISubsystem subsystem in subsystems) {
-            if (subsystem.GetHealth() > 0) {
-                subsystem.TakeDamage(damage);
-                return;
-            }
-        }
+        //foreach (ISubsystem subsystem in subsystems)
+        //{
+        //    if (subsystem.GetHealth() > 0)
+        //    {
+        //        subsystem.TakeDamage(damage);
+        //        return;
+        //    }
+        //}
 
         // If all subsystems
         DamageShip();
+        WindowsVoice.speak("Hull strength is at " + GetShipHealthPercent() + "%");
     }
 
     private void DamageShip() {
@@ -130,5 +136,10 @@ public class GameDirector : MonoBehaviour {
 
     private void GameWin() {
         SceneManager.LoadScene("GameWin");
+    }
+
+    private int GetShipHealthPercent()
+    {
+        return shipHealth * 100 / shipHealthMax;
     }
 }

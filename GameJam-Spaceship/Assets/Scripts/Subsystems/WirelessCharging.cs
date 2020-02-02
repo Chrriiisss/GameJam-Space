@@ -6,8 +6,8 @@ using UnityEngine.UI;
 public class WirelessCharging : MonoBehaviour, ISubsystem {
 
     private GameDirector gameDirector;
-    [SerializeField] public float componentHealth;
-    public readonly float maxHealth = 100;
+    [SerializeField] public int componentHealth;
+    public readonly int maxHealth = 100;
     public GameObject visionBlackout;
 
     // Start is called before the first frame update
@@ -33,5 +33,15 @@ public class WirelessCharging : MonoBehaviour, ISubsystem {
     private void ActivateEffect() {
         float size = (maxHealth - componentHealth) / 100f;
         // this.visionBlackout.GetComponent<RectTransform>().sizeDelta = new Vector2(2000f * size, 2000f * size);
+    }
+
+    public string ToString()
+    {
+        return "Lighting System";
+    }
+
+    public int GetPercentHealth()
+    {
+        return componentHealth * 100 / maxHealth;
     }
 }
