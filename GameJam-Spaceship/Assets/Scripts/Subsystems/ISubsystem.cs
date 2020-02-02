@@ -4,4 +4,5 @@
     void Repair();
     int GetPercentHealth();
     string ToString();
+    string GetDescription();
 }

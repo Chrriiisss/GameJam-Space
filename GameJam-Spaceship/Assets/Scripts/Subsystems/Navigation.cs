@@ -47,4 +47,9 @@ public class Navigation : MonoBehaviour, ISubsystem {
     {
         return componentHealth * 100 / maxHealth;
     }
+
+    public string GetDescription()
+    {
+        return "Allows avoidance of asteroids";
+    }
 }

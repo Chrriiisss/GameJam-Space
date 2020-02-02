@@ -64,7 +64,7 @@ public class LightController : MonoBehaviour
         }
         else if(flickering)
         {
-            Debug.Log("FLICKERING");
+            //Debug.Log("FLICKERING");
             if (flickerTimer < 0)
             {
                 if (light.intensity > 0)

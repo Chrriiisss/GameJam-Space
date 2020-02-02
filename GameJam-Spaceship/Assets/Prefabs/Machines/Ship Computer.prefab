@@ -139,6 +139,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Ship Computer
       objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: da27cbc39d64cca4e9eb8e6f666a5397,
+        type: 3}
+      propertyPath: m_TagString
+      value: Machine
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: da27cbc39d64cca4e9eb8e6f666a5397, type: 3}
 --- !u!4 &1403155824652643065 stripped

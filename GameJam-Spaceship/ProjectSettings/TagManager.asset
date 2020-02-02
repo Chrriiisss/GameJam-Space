@@ -5,6 +5,7 @@ TagManager:
   serializedVersion: 2
   tags:
   - Repairable
+  - Machine
   layers:
   - Default
   - TransparentFX
