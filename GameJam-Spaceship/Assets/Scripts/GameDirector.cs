@@ -17,7 +17,7 @@ public class GameDirector : MonoBehaviour {
 
     public AudioClip[] clips;
 
-    private float timeToNextAsteroid = 0.0f;
+    private float timeToNextAsteroid = 2.0f;
 
     private float randomModifiers = 0f;
 
@@ -99,6 +99,7 @@ public class GameDirector : MonoBehaviour {
         int iteration = 0;
         foreach (ISubsystem subsystem in subsystems) {
             Debug.Log("Iteration: " + iteration);
+            Debug.Log("Object: " + subsystem);
             if (choice == iteration && subsystem.GetHealth() > 0) {
                 subsystem.TakeDamage(damage);
                 WindowsVoice.speak("The " + subsystem.ToString() + " is at " + subsystem.GetPercentHealth() + "% health");

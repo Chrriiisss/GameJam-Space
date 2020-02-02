@@ -35,7 +35,7 @@ public class RepairController : MonoBehaviour
 
                    Debug.Log(hit.transform.GetComponentInParent<ISubsystem>().GetHealth());
 
-                    if(Input.GetKeyUp("Use")){
+                    if(Input.GetKeyUp(KeyCode.E)){
                         Debug.Log("Click");
                         hit.transform.GetComponentInParent<ISubsystem>().Repair();
                     }
