@@ -1,12 +1,14 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class WirelessCharging : MonoBehaviour, ISubsystem {
 
     private GameDirector gameDirector;
-    private int componentHealth;
-    private readonly int maxHealth = 100;
+    [SerializeField] private float componentHealth;
+    private readonly float maxHealth = 100;
+    public GameObject visionBlackout;
 
     // Start is called before the first frame update
     void Start() {
@@ -15,14 +17,12 @@ public class WirelessCharging : MonoBehaviour, ISubsystem {
     }
 
     public int GetHealth() {
-        return this.componentHealth;
+        return (int) this.componentHealth;
     }
 
     public void TakeDamage(int damageAmount) {
         this.componentHealth = Mathf.Max(0, this.componentHealth - damageAmount);
-        if (componentHealth == 0) {
-            ActivateEffect();
-        }
+        ActivateEffect();
     }
 
     public void Repair() {
@@ -31,6 +31,7 @@ public class WirelessCharging : MonoBehaviour, ISubsystem {
     }
 
     private void ActivateEffect() {
-        // TODO: Affect player vision
+        float size = (maxHealth - componentHealth) / 100f;
+        this.visionBlackout.GetComponent<RectTransform>().sizeDelta = new Vector2(1750f * size, 1750f * size);
     }
 }
