@@ -32,8 +32,8 @@ public class InfoFinder : MonoBehaviour
             canvasObject.enabled = true;
             ISubsystem subsystem = hit.transform.GetComponentInParent<ISubsystem>();
 
-            machineName.text = "" + subsystem.ToString() + ": Press R/Q for info";
-            if (Input.GetKeyDown(KeyCode.R) || Input.GetKeyDown(KeyCode.Q))
+            machineName.text = "" + subsystem.ToString() + ": Press R/Q or Controller Y for info";
+            if (Input.GetKeyDown(KeyCode.R) || Input.GetKeyDown(KeyCode.Q) || Input.GetKeyDown(KeyCode.Joystick1Button3))
             {
                 WindowsVoice.speak(subsystem.GetDescription());
             }
