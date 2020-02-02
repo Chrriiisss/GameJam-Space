@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class SubsystemController : MonoBehaviour {
 
-    private List<ISubsystem> subsystems = new List<ISubsystem>();
+    [SerializeField] private List<ISubsystem> subsystems = new List<ISubsystem>();
     // Start is called before the first frame update
     void Start() {
         this.subsystems.Add(GameObject.Find("Wireless Charging").GetComponent<WirelessCharging>());
