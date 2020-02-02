@@ -141,14 +141,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   clips:
-  - {fileID: 8300000, guid: 9690d848e9c13c243a0e8ccf3afd99de, type: 3}
-  - {fileID: 8300000, guid: be576abcbf5118547bfa81110ab0546b, type: 3}
-  - {fileID: 8300000, guid: 033cbc0cf2d42fb45b3321cccbe43123, type: 3}
-  - {fileID: 8300000, guid: 9e59a7e820d0ac84aabad038af974775, type: 3}
-  - {fileID: 8300000, guid: d23a29c50aa92fa4c9b26b8da442175a, type: 3}
-  - {fileID: 8300000, guid: f68dde65dba6cef44a4d20510d75dfc2, type: 3}
-  - {fileID: 8300000, guid: 8cbe1a717dfa8d44080c39d0527e378e, type: 3}
-  - {fileID: 8300000, guid: c7d9ffcdc18727a44a3d348b1acb3891, type: 3}
+  - {fileID: 8300000, guid: 60de26e91c64d124cb3d74b1e5efb1cf, type: 3}
+  - {fileID: 8300000, guid: ade1eb3a90869b548b2fd7cf2163d408, type: 3}
+  - {fileID: 8300000, guid: 562fbdd3b458db145a89a6a8d6243ac6, type: 3}
   timeToNextClip: 0
 --- !u!95 &5654822932232733528
 Animator:
